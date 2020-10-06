@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINING2</title>
+</head>
+<body style="background-color: pink;">
+    <h1 style="text-align: center;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+               margin-top: 50px;"
+               >Bienvenue dans <span style="color: brown;">calculer-votre-imc.com</span></h1>
+               <p id="imc"
+                  style="text-align: center;
+                  font-family:Verdana, Geneva, Tahoma, sans-serif;
+                  font-weight: bold;
+                  margin-top: 150px;
+                  color: black;">
+               </p>
+    <div style="display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 250px;">
+        <button style="font-weight: bold;
+                       font-size: 20px;
+                       color: black;
+                       background-color: coral;
+                       width: 275px;
+                       height: 50px;
+                       border-radius: 4px;"
+        onclick="   let weight;
+                    if (weight = prompt('Entrez votre poids (en kg) :')){
+                        let cut;
+                        if (cut = prompt('Entrez votre taille (en cm) :')){
+                            cut = cut / 100;
+                            let temp = (IMC(weight, cut));
+                            temp = Math.round(temp * 10) / 10; // pour arrondir à 1 chiffre après la virgule.
+                            let fras = 'Votre IMC est de : ';
+                            switch(true){
+                                case (temp < 18.5):
+                                    document.getElementById('imc').style.color='red';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br> Vous êtes en état d\'INSUFFISANCE PONDÉRALE (maigreur).<br> Il s\'agirait de manger...';
+                                    break;
+                                case (temp >= 18.5 && temp < 25):
+                                    document.getElementById('imc').style.color='green';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br>Félicitations, vous êtes en état de CORPULENCE NORMAL.';
+                                    break;
+                                case (temp >= 25 && temp < 30):
+                                    document.getElementById('imc').style.color='yellow';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br> Vous êtes en état de SURPOIDS.<br> Faites attention...';
+                                    break;
+                                case (temp >= 30 && temp < 35):
+                                    document.getElementById('imc').style.color='#eca90e';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br> Vous êtes en état d\'OBÉSITÉ MODÉRÉE.<br> Ça commence à faire un peu trop...';
+                                    break;
+                                case (temp >= 35 && temp < 40):
+                                    document.getElementById('imc').style.color='#ec830e';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br> Vous êtes en état d\'OBÉSITÉ SÉVÈRE.<br> Franchement vous exagérez...';
+                                    break;
+                                case (temp >= 40):
+                                    document.getElementById('imc').style.color='red';
+                                    document.getElementById('imc').innerHTML= fras + temp + '<br> Vous êtes en état d\'OBÉSITÉ MORBIDE.<br> À vomir...';
+                                    break;
+                                default:
+                                document.getElementById('imc').style.color='#0883c0';
+                                document.getElementById('imc').innerHTML= 'Veuillez entrer une valeur juste !';
+                            }
+                        }
+                    }">
+            >> Calculer votre IMC <<
+        </button>
+        <script>
+            function IMC(poids, taille){
+                poids = Number(poids);
+                taille = Number(taille);
+                return poids / (taille * taille);
+            }
+        </script>
+    </div>
+</body>
+</html>

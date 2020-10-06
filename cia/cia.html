@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TRAINING1</title>
+</head>
+<body style="background-color: #3c6382;">
+
+<img src="cia.png"
+     style="width: 200px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;">
+<h1 style="text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    color: black;">C. I. A</h1>
+<!-- ------------------------------- -->
+<p id="demo"
+   style="text-align: center;
+   color: red;"
+   >XXXXXXXXXXXXXXXXX
+</p>
+<!-- ------------------------------- -->
+<div style="text-align: center;">
+  <button style= "margin: auto;
+                  width: 200px;
+                  height: 50px;
+                  background-color: brown;
+                  border: 0;
+                  border-radius: 4px;
+                  box-shadow: 0px 0px 5px 3px black;
+                  font-weight: bold;
+                  color: whitesmoke;
+                  font-size: 16px;"
+          type="button" onclick="if(confirm('VOUS ENTREZ DANS UNE ZONE TOP SECRET, ÊTES-VOUS SÛR DE VOULOIR CONTINUER ?'))
+                                 {
+                                   let name;
+                                   if(name = prompt('Entrez votre nom :'))
+                                   {
+                                      spy(), waarning(name), bluedo();
+                                   }
+                                 }"
+                        onmouseover="this.style.backgroundColor='#EA2027', this.innerHTML='DON\'T CLICK !!!'"
+                        onmouseout="this.style.backgroundColor='brown' , this.innerHTML='Confidential access'"
+          >Confidential access
+  </button>
+</div>
+<!-- ------------------------------- -->
+<p id="warning"
+   style="text-align: center;
+   font-weight: bold;
+   color: #EA2027;
+   font-size: 30px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+</p>
+
+<!-- <p id="mode"></p>
+<script>
+  function calculatorByTen(number, operator, base = 10){
+    let result;
+    if (operator == "*"){
+      result = number * base;
+    }
+    else if(operator == "+"){
+      result = number + base;
+    }
+    else if(operator == "-"){
+      result = number - base;
+    }
+    else if(operator == "/"){
+      result = number / base;
+    }
+    document.getElementById("mode").innerHTML = result;
+  }
+calculatorByTen(151560, "+");
+</script> -->
+
+<!-- ------------------------------- -->
+<script>
+  function spy() {
+    var agent = {
+    pseudo : "Largo",
+    countMiss : "Iran",
+    referant : "Beryl",
+    };
+    document.getElementById("demo").innerHTML="•••••L'agent se nomme " + agent.pseudo +
+    ", en mission en " + agent.countMiss + ". Il a pour référant " + agent.referant + ".•••••";
+  }
+
+  function waarning(name){
+    document.getElementById("warning").innerHTML="^^^^^^^^^^^^^^<br> \
+    |   |   |   |   |   |   |   |   |   |   |   |   |   |   |<br> \
+    /!\\ " + name + " !!! Vous vous êtes introduit dans une zone classé secret défense /!\\ ";
+  }
+
+  function bluedo(){
+    document.getElementById("demo").style.color="#ff7979";
+  }
+  </script>
+<!-- ------------------------------- -->
+</body>
+</html>
+
+<!-- 
+  Les paires name:values en JS sont appelées propriétés
+  ex: firstName: "John",
+      lastName: "Doe", etc...
+
+  Il existe 2 manières d'accéder aux propriétés des objets :
+        objectName.propertyName
+        objectName["propertyName"]
+  ex : firstName.John || firstName["John"]
+-->
+
+<!-- 
+  Le mot clé "this" :
+    Dans une définition de fonction, cela fait référence au
+    "propriétaire" de la fonction.
+    En d'autres termes, this.firstName signifie la propriété
+    firstName de cet objet.
+-->
+
+<!-- 
+                  Quand utiliser les tableaux ?
+                  Quand utiliser des objets ?
+    JavaScript ne prend pas en charge les tableaux associatifs;
+    *Vous devez utiliser des objets lorsque vous souhaitez que les
+    noms d'éléments soient des chaînes (texte).
+    *Vous devez utiliser des tableaux lorsque vous souhaitez que les
+    noms d'éléments soient des nombres.
+-->
+
+<!-- Lorsqu'une variable n'est accessible que dans une partie de votre code,
+on dit qu'elle se trouve au sein d'un « scope ». Retenez bien ce terme,
+il vous servira à l'avenir. -->
