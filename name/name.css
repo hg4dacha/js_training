@@ -1,0 +1,37 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    height: 60%;
+    background-image: url("font.jpg");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@font-face{
+    font-family: 'arabic';
+    src: url('arabic.ttf');
+}
+
+p{
+    font-family: 'arabic';
+    font-size: 150px;
+    color: #222f3e;
+    text-shadow: 0px 1px 1px black;
+    margin: 0;
+    position: absolute;
+    bottom: -280px;
+    right: 50px;
+}
